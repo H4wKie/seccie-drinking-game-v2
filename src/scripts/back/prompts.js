@@ -242,7 +242,7 @@ const promptTask = [
     [`Task`, `name your current crush or take 4 sips`],
     [`Task`, `name your celebrity crush`],
     [`Task`, `switch seats with the person opposite of you`],
-    [`Task`, `go on a date with <a href="https://www.instagram.com/wyncko_roozeboom">@Wycnko</a>`],
+    [`Task`, `go on a date with <a href="https://www.instagram.com/wyncko_roozeboom">@Wyncko</a>`],
     [`Task`, `chug a beer if Gesa is in the room`],
     [`Task`, `everybody who is on their phone has to chug a beer (this phone not included)`],
     [`Task`, `start a waterfall`],
