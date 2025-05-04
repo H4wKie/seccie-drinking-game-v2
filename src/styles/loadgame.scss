@@ -1,0 +1,39 @@
+.switch {
+  padding-block: 20px;
+  padding-inline: 20px;
+  margin-block: 5px;
+  width: 500px;
+  text-align: left;
+  outline: 2px solid white;
+  cursor: pointer;
+}
+
+.not-sel {
+  background-color: transparent;
+  color: white;
+}
+
+.sel {
+  background-color: white;
+  color: #E53228;
+}
+
+.start-btn {
+  all: unset;
+
+  padding-block: 10px;
+  padding-inline: 20px;
+  margin-block-start: 20px;
+  font-weight: 900;
+  font-size: 1.125em;
+  border: 2px solid white;
+  border-radius: 40px;
+  cursor: pointer;
+  transition: 200ms ease;
+}
+
+.start-btn:hover {
+  background-color: white;
+  color: #E53228;
+  transition: 200ms ease;
+}

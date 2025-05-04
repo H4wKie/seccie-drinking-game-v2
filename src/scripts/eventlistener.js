@@ -1,0 +1,53 @@
+import { choosePrompt } from "./choose-prompts";
+import { loadPrompt } from "./load-prompt"
+import { selGameElem } from "./select-game-elem";
+import { gameArr } from "./choose-prompts";
+
+const mainEvent = ()=> {
+  loadPrompt(gameArr);
+}
+
+function addMainEventListner() {
+  const mainElem = document.querySelector('.main');
+  mainElem.addEventListener('click', mainEvent);
+}
+
+function removeMainEventListener() {
+  const mainElem = document.querySelector('.main');
+  mainElem.removeEventListener('click', mainEvent);
+}
+
+const switchEvent = (event)=> {
+  const elemClasslist = event.currentTarget.getAttribute('class');
+
+  if(elemClasslist.includes('not-sel')) {
+    event.currentTarget.setAttribute('class' ,elemClasslist.replace('not-sel', 'sel'));
+  }else {
+    event.currentTarget.setAttribute('class' ,elemClasslist.replace('sel', 'not-sel'));
+  }
+}
+
+function addSwtichEventListener() {
+  const switchELem = document.querySelectorAll('.switch');
+
+  switchELem.forEach(elem => {
+    elem.addEventListener('click', switchEvent);
+  })
+}
+
+const btnEvent = () => {
+  const gameTrue = selGameElem();
+
+  if(choosePrompt(gameTrue)) {
+    addMainEventListner();
+  }else {
+  }
+}
+
+function addBtnEventListener() {
+  const btnElem = document.querySelector('.start-btn');
+
+  btnElem.addEventListener('click', btnEvent);
+}
+
+export { addBtnEventListener, addMainEventListner, addSwtichEventListener, removeMainEventListener }
