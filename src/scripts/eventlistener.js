@@ -54,6 +54,7 @@ function addBtnEventListener() {
 }
 
 const startNewEvent = () => {
+  localStorage.clear();
   loadGame();
 }
 
