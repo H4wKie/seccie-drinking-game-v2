@@ -2,9 +2,10 @@ import { displayPrompt } from "./display-prompt";
 import { genNr } from "./gen-nr";
 import { loadGame } from "./load-game";
 import { removeMainEventListener } from "./eventlistener";
+import { getFromLocalStorage } from "./get-localstorage";
 
 
-let pastPrompts = []
+let pastPrompts = getFromLocalStorage('pastArr') || [];
 
 function loadPrompt(arr) {
   if(pastPrompts.length < arr.length) {
@@ -18,9 +19,10 @@ function loadPrompt(arr) {
   displayPrompt(arr[nr]);
   }else {
     pastPrompts = [];
+    localStorage.clear();
     removeMainEventListener();
     loadGame();
   }
 }
 
-export { loadPrompt }
+export { loadPrompt, pastPrompts }

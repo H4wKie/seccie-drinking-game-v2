@@ -1,6 +1,7 @@
 import { promptDrinkIf, promptMostLikely, promptTask } from "../scripts/back/prompts";
+import { getFromLocalStorage } from "./get-localstorage";
 
-let gameArr = []
+let gameArr = getFromLocalStorage('gameArr') || [];
 
 function choosePrompt(arr) {
   gameArr = [];

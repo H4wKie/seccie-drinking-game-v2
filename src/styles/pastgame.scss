@@ -1,0 +1,29 @@
+.past-game {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.standard-btn {
+  all: unset;
+  cursor: pointer;
+  height: 100%;
+  padding-block: 10px;
+  padding-inline: 20px;
+  margin-inline: 20px;
+  font-weight: 900;
+  outline: 2px solid white;
+
+  transition: 200ms;
+}
+
+.prompts-left {
+  font-size: 0.75em;
+}
+
+.standard-btn:hover {
+  background-color: white;
+  color: #E53228;
+
+  transition: 200ms;
+}
